@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>比賽</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(./img/場地.jpg);
+            overflow-x: hidden;
+            background-size: 2500px;
+            background-position: center;
+        }
+
+        header {
+            background-color: #FF6347;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            background-color: #FF6347;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #ff3300;
+            transform: scale(1.1);
+            border-radius: 5px;
+        }
+
+        .volleyball {
+            width: 100px;
+            height: 100px;
+            background: url('./img/排球.png') no-repeat center/contain;
+            position: absolute;
+            animation: bounce 3s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-200px);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotating-ball {
+            width: 100px;
+            height: 100px;
+            background: url('./img/排球.png') no-repeat center/contain;
+            margin: 20px auto;
+            animation: spin 3s linear infinite;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 300px;
+            margin: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card p {
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #FF6347;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .highlight {
+            color: #FF6347;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #FF6347;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #FF4500;
+        }
+
+        .introduction-section {
+            color: wheat;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 955px;
+            margin: auto;
+        }
+
+        .introduction-box {
+            max-width: 1500px;
+            background: rgb(255, 255, 255);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .introduction-box h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #2c2b25;
+            /* 金色 */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .introduction-box p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: rgb(0, 0, 0);
+        }
+
+        .introduction-box:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href="./index.html">首頁</a></li>
+            <li><a href="./Contest.html">比賽</a></li>
+            <li><a href="./rule.html">賽制</a></li>
+        </ul>
+    </header>
+
+    <div class="volleyball"></div>
+    
+    <section class="container">
+        <div class="card">
+            <div class="video-container">
+                <iframe 
+                  width="310" 
+                  height="310" 
+                  src="https://www.youtube.com/embed/bfuPJeCSsL8?si=0c_A0H3bg0rDdA05" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            <p>曾祥銘高空制霸 迅速升空高打點扣殺壓制對手 #TVL20 #企業20年甲級男女排球聯賽 #企排20戰 #企排20 #CTVBA #連莊 #屏東台電 #曾祥銘 #黃正良</p>
+        </div>
+        <div class="card">
+            <div class="video-container">
+                <iframe 
+                  width="310" 
+                  height="310" 
+                  src="https://www.youtube.com/embed/FgQgx5sLMhU?si=zhEs-LO6YT1HRS7Y" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            <p>吳宗軒化身攻擊萬花筒 重砲連發火力全開！#TVL20 #企業20年甲級男女排球聯賽 #企排20戰 #企排20 #CTVBA #連莊 #屏東台電 #吳宗軒 #呂姜耀凱</p>
+        </div>
+        <div class="card">
+            <div class="video-container">
+                <iframe 
+                  width="310" 
+                  height="310" 
+                  src="https://www.youtube.com/embed/zXezk8bB8p0?si=Bmk09CPVaB0vM4EP" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            <p>林聖恩四號位轟炸 後排殺出奇襲對手反應不及 #TVL20 #企業20年甲級男女排球聯賽 #企排20戰 #企排20 #CTVBA #彰化三大有線 #臺北Conti #林聖恩 #李元</p>
+        </div>
+
+    </section>
+    <section class="container">
+        <div class="card">
+            <div class="video-container">
+                <iframe 
+                  width="310" 
+                  height="310" 
+                  src="https://www.youtube.com/embed/rBUU8E-W8tw?si=9An-dyLIJ0--eBua" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            <p>吳國強重砲無情 賴建豪平行位移 守護主場完美勝利 #TVL20 #企業20年甲級男女排球聯賽 #企排20戰 #企排20 #CTVBA #彰化三大有線 #臺北Conti #吳國強 #賴建豪</p>
+        </div>
+        <div class="card">
+            <div class="video-container">
+                <iframe 
+                  width="310" 
+                  height="310" 
+                  src="https://www.youtube.com/embed/89XFJxn8KuI"  
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            <p>葉于雯背飛到位 張瓈文穩定出擊 雙箭齊發勢不可擋 #TVL20 #企業20年甲級男女排球聯賽 #企排20戰 #企排20 #CTVBA #新北中纖 #義力營造 #葉于雯 #Jarasporn #張瓈文</p>
+        </div>
+        <div class="card">
+            <div class="video-container">
+                <iframe 
+                  width="310" 
+                  height="310" 
+                  src="https://www.youtube.com/embed/NW8oqssIs84" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            <p>簡翊雯火力復甦與陳品宇完美協調 破防猛擊強攻來襲 #TVL20 #企業20年甲級男女排球聯賽 #企排20戰 #企排20 #CTVBA #新北中纖 #義力營造 #簡翊雯 #陳品宇</p>
+        </div>
+
+    </section>
+    <section class="container">
+        <div class="card">
+            <div class="video-container">
+                <iframe 
+                  width="310" 
+                  height="310" 
+                  src="https://www.youtube.com/embed/eyW1OT3v1OE"
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            <p>汪秉勳神速撲接 連莊團隊戰力完美連線#TVL20 #企業20年甲級男女排球聯賽 #企排20戰 #企排20 #CTVBA #臺北Conti #連莊 #汪秉勳 #呂姜耀凱 #吳宗軒 #高偉誠</p>
+        </div>
+        <div class="card">
+            <div class="video-container">
+                <iframe 
+                  width="310" 
+                  height="310" 
+                  src="https://www.youtube.com/embed/QvlBsaVw9UE" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            <p>Monster Block降臨 李元高牆封阻 攻防一體霸氣外露 #TVL20 #企業20年甲級男女排球聯賽 #企排20戰 #企排20 #CTVBA #臺北Conti #連莊 #李元</p>
+        </div>
+        <div class="card">
+            <div class="video-container">
+                <iframe 
+                  width="310" 
+                  height="310" 
+                  src="https://www.youtube.com/embed/qLel01RWNVY" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            <p>莊子霖進攻全面升級 後排殺出火力無死角 #TVL20 #企業20年甲級男女排球聯賽 #企排20戰 #企排20 #CTVBA #屏東台電 #彰化三大有線 #陳恩得 #莊子霖</p>
+        </div>
+
+    </section>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

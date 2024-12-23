@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(./img/場地.jpg);
+            overflow-x: hidden;
+            background-size: 2500px;
+            background-position: center;
+        }
+
+        header {
+            background-color: #FF6347;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            background-color: #FF6347;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #ff3300;
+            transform: scale(1.1);
+            border-radius: 5px;
+        }
+
+        .volleyball {
+            width: 100px;
+            height: 100px;
+            background: url('./img/排球.png') no-repeat center/contain;
+            position: absolute;
+            animation: bounce 3s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-200px);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotating-ball {
+            width: 100px;
+            height: 100px;
+            background: url('./img/排球.png') no-repeat center/contain;
+            margin: 20px auto;
+            animation: spin 3s linear infinite;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 300px;
+            margin: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card h3 {
+            padding: 10px;
+            background-color: #FF6347;
+            color: white;
+            margin: 0;
+        }
+
+        .card p {
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #FF6347;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .highlight {
+            color: #FF6347;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #FF6347;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #FF4500;
+        }
+
+        .introduction-section {
+            color: wheat;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 955px;
+            margin: auto;
+        }
+
+        .introduction-box {
+            max-width: 1500px;
+            background: rgb(255, 255, 255);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .introduction-box h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #2c2b25;
+            /* 金色 */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .introduction-box p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: rgb(0, 0, 0);
+        }
+
+        .introduction-box:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href="./index.html">首頁</a></li>
+            <li><a href="./Contest.html">比賽</a></li>
+            <li><a href="./rule.html">賽制</a></li>
+        </ul>
+    </header>
+
+    <div class="volleyball"></div>
+
+    <section class="container">
+        <div class="card">
+            <img src="./img/比賽 2.jpg" alt="排球動作">
+            <h3>刺激的比賽</h3>
+            <p>體驗激烈的排球比賽，探索世界上最優秀的隊伍。</p>
+        </div>
+        <div class="card">
+            <img src="img/訓練.webp" alt="訓練技巧">
+            <h3>訓練技巧</h3>
+            <p>通過專家提供的訓練技巧和練習提高你的技能，適合各種水平。</p>
+        </div>
+        <div class="card">
+            <img src="./img/歷史.jpg" alt="排球歷史">
+            <h3>排球歷史</h3>
+            <p>了解排球的起源以及它如何成為世界上最受歡迎的運動之一。</p>
+        </div>
+
+    </section>
+    <div class="introduction-section">
+        <div class="introduction-box">
+            <img src="./img/比賽.jpg" alt="" width="100%" height="350px">
+            <p>
+                這裡是所有排球愛好者的最佳聚集地，無論您是剛接觸排球的新手，還是熱愛這項運動的忠實粉絲，都能找到專屬於您的精彩內容。我們為您提供豐富的排球資訊，包括比賽報導、訓練技巧、球員故事，以及排球運動的歷史與文化。同時，我們還將定期分享即將舉行的比賽和活動，讓您不會錯過任何一場精彩的對決。
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
